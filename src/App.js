@@ -3,10 +3,11 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header";
 import Recipes from "./Components/Recipes";
-
+import Futer from "./Components/Futer";
 import Axios from "axios";
+
 function App() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("banana");
   const [recipes, setRecipes] = useState([]);
 
   const APP_ID = "383cdaba";
@@ -28,17 +29,20 @@ function App() {
     setSearch(e.target.value);
   };
 
-  const onSearchClick = () =>{
+  const onSearchClick = () => {
     getRecipes();
-  }
+  };
   return (
     <div className="App">
-      <Header search={search} onInputChange={onInputChange} 
-        onSearchClick = {onSearchClick}
+      <Header
+        search={search}
+        onInputChange={onInputChange}
+        onSearchClick={onSearchClick}
       />
-      <div className='container'>
+      <div className="container">
         <Recipes recipes={recipes} />
       </div>
+      <Futer />
     </div>
   );
 }

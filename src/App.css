@@ -8,5 +8,23 @@
 
 .material-icons{
   font-size: 80px;
+}
 
+.futer {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(47, 39, 39);
+  color: white;
+  text-align: center;
+}
+.futer p{
+  margin-top: 20px;
+}
+
+/* input text style */
+.form-control{
+  margin-top: 20px;
 }
